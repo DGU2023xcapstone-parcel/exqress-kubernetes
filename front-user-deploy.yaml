@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-user-deploy
+spec:
+  selector:
+    matchLabels:
+      tier: front-user
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        tier: front-user
+    spec:
+      containers:
+        - name: front-user
+          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/front-user:24
+          ports:
+            - containerPort: 80
+              protocol: TCP

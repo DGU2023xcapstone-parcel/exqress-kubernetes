@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-delivery-deploy
+spec:
+  selector:
+    matchLabels:
+      tier: front-delivery
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        tier: front-delivery
+    spec:
+      containers:
+        - name: front-delivery
+          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/front-delivery:38
+          ports:
+            - containerPort: 80
+              protocol: TCP

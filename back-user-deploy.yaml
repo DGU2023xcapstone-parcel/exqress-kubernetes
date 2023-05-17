@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back-user-deploy
+spec:
+  selector:
+    matchLabels:
+      tier: back-user
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        tier: back-user
+    spec:
+      containers:
+        - name: back-user
+          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-user:18
+          ports:
+            - containerPort: 4002
+              protocol: TCP

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: front-delivery-svc
+spec:
+  selector:
+    tier: front-delivery
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 31112
