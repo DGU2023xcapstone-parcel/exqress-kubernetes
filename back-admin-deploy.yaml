@@ -35,6 +35,15 @@ spec:
           persistentVolumeClaim:
             claimName: ebs-pvc
       affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: back
+                    operator: In
+                    values:
+                      - delivery
+              topologyKey: "kubernetes.io/hostname"
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             - labelSelector:
