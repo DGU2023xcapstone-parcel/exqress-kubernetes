@@ -18,3 +18,34 @@ spec:
           ports:
             - containerPort: 4002
               protocol: TCP
+          volumeMounts:
+            - name: ebs-volume
+              mountPath: /data
+          resources:
+            requests:
+              cpu: 200m
+              memory: 200M
+      volumes:
+        - name: ebs
+          persistentVolumeClaim:
+            claimName: ebs-pvc
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: tier
+                    operator: In
+                    values:
+                      - back-delivery
+                      - back-admin
+              topologyKey: "kubernetes.io/hostname"
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: back
+                    operator: In
+                    values:
+                      - user
+              topologyKey: "kubernetes.io/hostname"
