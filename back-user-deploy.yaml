@@ -42,7 +42,6 @@ spec:
                   - key: back
                     operator: In
                     values:
-                      - delivery
                       - admin
               topologyKey: "kubernetes.io/hostname"
         podAntiAffinity:
