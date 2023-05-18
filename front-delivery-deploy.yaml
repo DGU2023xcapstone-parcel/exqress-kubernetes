@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: front-delivery
-          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/front-delivery:39
+          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/front-delivery:40
           ports:
             - containerPort: 80
               protocol: TCP
