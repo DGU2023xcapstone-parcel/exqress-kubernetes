@@ -3,6 +3,11 @@ kind: Deployment
 metadata:
   name: back-admin-deploy
 spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 0
   selector:
     matchLabels:
       tier: back-admin
