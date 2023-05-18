@@ -34,11 +34,11 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             - labelSelector:
                 matchExpressions:
-                  - key: tier
+                  - key: back
                     operator: In
                     values:
-                      - back-user
-                      - back-delivery
+                      - user
+                      - delivery
               topologyKey: "kubernetes.io/hostname"
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
