@@ -3,7 +3,7 @@ kind: StorageClass
 metadata:
   name: gp3
 provisioner: ebs.csi.aws.com
-volumeBindingMode: Immediate
+volumeBindingMode: WaitForFirstConsumer
 reclaimPolicy: Delete
 parameters:
   type: gp3
