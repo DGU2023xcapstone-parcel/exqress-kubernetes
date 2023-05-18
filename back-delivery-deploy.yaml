@@ -39,8 +39,8 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             - labelSelector:
                 matchExpressions:
-                  - key: back
+                  - key: tier
                     operator: In
                     values:
-                      - delivery
+                      - back-delivery
               topologyKey: "kubernetes.io/hostname"
