@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: back-delivery
-          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-delivery:28
+          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-delivery:29
           env:
             - name: REDIS_HOST
               value: "redis"
