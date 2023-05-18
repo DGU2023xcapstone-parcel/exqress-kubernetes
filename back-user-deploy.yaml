@@ -42,7 +42,7 @@ spec:
                   - key: back
                     operator: In
                     values:
-                      - admin
+                      - delivery
               topologyKey: "kubernetes.io/hostname"
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
