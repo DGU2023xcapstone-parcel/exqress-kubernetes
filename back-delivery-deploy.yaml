@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: back-delivery
-          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-delivery:41
+          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-delivery:42
           ports:
             - containerPort: 4001
               protocol: TCP
