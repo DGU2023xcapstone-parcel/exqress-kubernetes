@@ -21,7 +21,16 @@ spec:
     spec:
       containers:
         - name: back-delivery
+<<<<<<< HEAD
           image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-delivery:28
+=======
+          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-delivery:29
+          env:
+            - name: REDIS_HOST
+              value: "redis"
+            - name: REDIS_PORT
+              value: "6379"
+>>>>>>> b03907349612491f6827e4b823b38e40ecd416a0
           ports:
             - containerPort: 4001
               protocol: TCP
