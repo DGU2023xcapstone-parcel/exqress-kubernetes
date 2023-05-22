@@ -11,13 +11,11 @@ spec:
   selector:
     matchLabels:
       tier: back-delivery
-      app: counter
   replicas: 1
   template:
     metadata:
       labels:
         tier: back-delivery
-        app: counter
     spec:
       containers:
         - name: back-delivery
