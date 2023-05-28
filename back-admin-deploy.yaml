@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: back-admin
-          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-admin:4
+          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-admin:latest
           ports:
             - containerPort: 8000
               protocol: TCP
