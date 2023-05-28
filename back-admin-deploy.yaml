@@ -21,7 +21,7 @@ spec:
         - name: back-admin
           image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-admin:latest
           ports:
-            - containerPort: 8000
+            - containerPort: 4003
               protocol: TCP
           volumeMounts:
             - name: ebs-volume
