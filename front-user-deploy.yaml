@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: front-user
-          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/front-user:27
+          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/front-user:30
           ports:
             - containerPort: 80
               protocol: TCP
