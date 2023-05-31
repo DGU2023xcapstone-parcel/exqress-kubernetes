@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: back-user
-          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-user:50
+          image: 916553408917.dkr.ecr.ap-northeast-2.amazonaws.com/back-user:51
           ports:
             - containerPort: 4002
               protocol: TCP
